@@ -10,6 +10,7 @@ public class MenuItem implements Serializable{
     private String descriptionItem;
     private String categoryItem;
     private boolean availableItem;
+    
     //Constructors
     public MenuItem(int idItem, double priceItem, String nameItem, String descriptionItem, String categoryItem, boolean availableItem){
         setAvailableItem(availableItem);
@@ -87,4 +88,5 @@ public class MenuItem implements Serializable{
     public boolean getAvailableItem(){
         return availableItem;
     }
+    
 }
