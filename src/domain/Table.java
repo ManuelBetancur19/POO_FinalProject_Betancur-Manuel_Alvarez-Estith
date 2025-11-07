@@ -13,7 +13,7 @@ public class Table implements Serializable {
     }
 
     //setter//
-    public void setId(int tableNumber){
+    public void setTableNumber(int tableNumber){
         if (tableNumber > 0){
             this.tableNumber = tableNumber;
         }else{
@@ -21,7 +21,7 @@ public class Table implements Serializable {
         }
     }
     //getter//
-    public int getId(){
+    public int getTableNumber(){
         return tableNumber;
     }
 }

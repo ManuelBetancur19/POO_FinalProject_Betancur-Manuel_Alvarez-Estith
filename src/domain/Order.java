@@ -19,6 +19,20 @@ public class Order implements Serializable{
         this.table = table;
     }
 
+    //setters//
+    public void setIdOrder(int idOrder){
+        this.idOrder = idOrder;
+    }
+    public void setMenuItems(ArrayList<MenuItem> menuItems){
+        this.menuItems = menuItems;
+    }
+    public void setCustomer(Customer customer){
+        this.customer = customer;
+    }
+    public void setTable(Table table){
+        this.table = table;
+    }
+
     //getters//
     public int getIdOrder(){
         return idOrder;
@@ -33,7 +47,7 @@ public class Order implements Serializable{
         return table;
     }
 
-    //list metods//
+    //metods for add/remove in the list//
     public void addMenuItem(MenuItem item){
         menuItems.add(item);
     }
