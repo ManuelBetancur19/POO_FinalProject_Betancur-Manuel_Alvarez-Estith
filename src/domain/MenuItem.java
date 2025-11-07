@@ -6,14 +6,14 @@ public class MenuItem implements Serializable {
 
     //variables//
     private int idItem;
-    private double priceItem;
+    private float priceItem;
     private String nameItem;
     private String descriptionItem;
     private String categoryItem;
     private boolean availableItem;
     
     //Constructors//
-    public MenuItem(int idItem, double priceItem, String nameItem, String descriptionItem, String categoryItem, boolean availableItem){
+    public MenuItem(int idItem, float priceItem, String nameItem, String descriptionItem, String categoryItem, boolean availableItem){
         setAvailableItem(availableItem);
         setCategoryItem(categoryItem);
         setDescriptionItem(descriptionItem);
@@ -38,7 +38,7 @@ public class MenuItem implements Serializable {
             this.idItem = idItem;
         }
     }
-    public void setPriceItem(double priceItem){
+    public void setPriceItem(float priceItem){
         if(priceItem <= 0){
             this.priceItem = 1;
         }else{
@@ -74,7 +74,7 @@ public class MenuItem implements Serializable {
     public int getIdItem(){
         return idItem;
     }
-    public double getPriceItem(){
+    public float getPriceItem(){
         return priceItem;
     }
     public String getNameItem(){

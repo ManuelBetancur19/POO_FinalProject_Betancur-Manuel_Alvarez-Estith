@@ -25,8 +25,11 @@ public class Restaurant implements Serializable{
 
     //setters//
     public void setName(String name){
-        if(name.isEmpty() || name == null){
+        if(name.isEmpty()){
             this.name = "Restaurant";
+        }
+        else{
+            this.name = name;
         }
     }
     public void setDishes(List<MenuItem> dishes){
