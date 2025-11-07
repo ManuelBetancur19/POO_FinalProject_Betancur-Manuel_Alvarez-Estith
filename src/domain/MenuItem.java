@@ -29,6 +29,7 @@ public class MenuItem implements Serializable {
         categoryItem = "Sin Categoria";
         availableItem = false;
     }
+    
     //setters//
     public void setIdItem(int idItem){
         if(idItem <= 0){
@@ -39,7 +40,7 @@ public class MenuItem implements Serializable {
     }
     public void setPriceItem(double priceItem){
         if(priceItem <= 0){
-            this.priceItem = 1000;
+            this.priceItem = 1;
         }else{
             this.priceItem = priceItem;
         }
@@ -66,10 +67,9 @@ public class MenuItem implements Serializable {
         }
     }
     public void setAvailableItem(boolean availableItem){
-        if(availableItem != false && availableItem != true){
-            this.availableItem = false;
-        }
+        this.availableItem = availableItem;
     }
+
     //getters//
     public int getIdItem(){
         return idItem;
