@@ -1,16 +1,20 @@
 package domain;
+
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Restaurant implements Serializable{
+    
+    //information of restaurant//
     private String name;
+
     //Lists
     private List <MenuItem> dishes;
     private List <Table> tables;
     private List <Order> orders;
     private List <Customer> customers;
     
+    //constructor//
     public Restaurant(String name, List<MenuItem> dishes, List<Table> tables, List<Order> orders, List<Customer> customers){
         setName(name);
         setDishes(dishes);
@@ -19,7 +23,7 @@ public class Restaurant implements Serializable{
         setCustomers(customers);
     }
 
-    //Setters
+    //setters//
     public void setName(String name){
         if(name.isEmpty() || name == null){
             this.name = "Restaurant";
@@ -39,7 +43,7 @@ public class Restaurant implements Serializable{
         this.customers = customers;
         }
     
-    //getters
+    //getters//
     public String getName(){
         return name;
     }
