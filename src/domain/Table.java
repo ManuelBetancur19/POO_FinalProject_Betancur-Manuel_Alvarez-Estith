@@ -4,24 +4,45 @@ import java.io.Serializable;
 
 public class Table implements Serializable {
 
-    //information of table//
-    private int tableNumber;
-    
-    //constructor//
-    public Table(int tableNumber){
-        this.tableNumber = tableNumber;
+    // variable
+    private static int counter = 1;
+    private int id;
+    private int seats;
+    private boolean occupied;
+
+    // constructor
+    public Table(int seats) {
+        this.id = counter++;
+        this.seats = seats;
+        this.occupied = false;
     }
 
-    //setter//
-    public void setTableNumber(int tableNumber){
-        if (tableNumber > 0){
-            this.tableNumber = tableNumber;
-        }else{
-            this.tableNumber = 0;
-        }
+    // setters
+    public void setOccupied(boolean o) {
+        occupied = o;
     }
-    //getter//
-    public int getTableNumber(){
-        return tableNumber;
+    public static void setCounter(int value){
+        counter = value;
+    }
+
+    // getters
+    public int getId() {
+        return id;
+    }
+
+    public int getSeats() {
+        return seats;
+    }
+
+    public boolean isOccupied() {
+        return occupied;
+    }
+
+    @Override
+    public String toString() {
+        return "Table ( id=" + id +
+                ", seats=" + seats +
+                ", occupied=" + occupied +
+                " )";
     }
 }

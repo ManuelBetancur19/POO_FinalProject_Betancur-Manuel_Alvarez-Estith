@@ -3,55 +3,66 @@ package domain;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Order implements Serializable{
-    
-    //variables//
-    private int idOrder;
-    private ArrayList<MenuItem> menuItems;
+public class Order implements Serializable {
+
+    // variables
+    private static int counter = 1;
+    private int id;
     private Customer customer;
-    private Table table;
+    private ArrayList<MenuItem> items = new ArrayList<>();
+    private boolean closed = false;
 
-    //constructor//
-    public Order(int idOrder, ArrayList<MenuItem> menuItems, Customer customer, Table table){
-        this.idOrder = idOrder;
-        this.menuItems = menuItems;
-        this.customer = customer;
-        this.table = table;
-    }
-
-    //setters//
-    public void setIdOrder(int idOrder){
-        this.idOrder = idOrder;
-    }
-    public void setMenuItems(ArrayList<MenuItem> menuItems){
-        this.menuItems = menuItems;
-    }
-    public void setCustomer(Customer customer){
+    // constructor
+    public Order(Customer customer) {
+        this.id = counter++;
         this.customer = customer;
     }
-    public void setTable(Table table){
-        this.table = table;
+
+    // setters
+    public static void setCounter(int value){
+        counter = value;
     }
 
-    //getters//
-    public int getIdOrder(){
-        return idOrder;
+    // getters
+    public int getId() {
+        return id;
     }
-    public ArrayList<MenuItem> getMenuItems(){
-        return menuItems;
-    }
-    public Customer getCustomer(){
+
+    public Customer getCustomer() {
         return customer;
     }
-    public Table getTable(){
-        return table;
+
+    public ArrayList<MenuItem> getItems() {
+        return items;
     }
 
-    //metods for add/remove in the list//
-    public void addMenuItem(MenuItem item){
-        menuItems.add(item);
+    // methods for add/remove list
+    public void addItem(MenuItem item) {
+        items.add(item);
     }
-    public void removeMenuitem(MenuItem item){
-        menuItems.remove(item);
+
+    public void removeItem(MenuItem item) {
+        items.remove(item);
+    }
+
+    public double calculateTotal() {
+        double total = 0;
+        for (MenuItem m : items)
+            total += m.getPrice();
+        return total;
+    }
+
+    public void closeOrder() {
+        closed = true;
+    }
+
+    @Override
+    public String toString() {
+        return "Order (id=" + id +
+                ", customer=" + customer.getName() +
+                ", identification=" + customer.getIdentificationNumber() +
+                ", total=" + calculateTotal() +
+                ", closed=" + closed +
+                " )";
     }
 }
