@@ -4,7 +4,7 @@ public class Customer {
     private static int counter = 1;
     private int id;  
     private String name;
-    private String identificationNumber; // ← antes era phone
+    private String identificationNumber; 
     private Table assignedTable;
 
     public Customer(String name, String identificationNumber) {
