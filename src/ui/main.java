@@ -4,7 +4,7 @@ import domain.*;
 import java.util.Scanner;
 
 public class Main {
-    private static final Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         try {
@@ -175,9 +175,9 @@ public class Main {
                         try {
                             System.out.print("Enter customer name: ");
                             String name = scanner.nextLine();
-                            System.out.print("Enter phone: ");
-                            String phone = scanner.nextLine();
-                            Customer c = r.addCustomer(name, phone);
+                            System.out.print("Enter identification number: "); // CAMBIO
+                            String idNumber = scanner.nextLine();
+                            Customer c = r.addCustomer(name, idNumber);
                             System.out.println("Added: " + c);
                         } catch (Exception e) {
                             System.out.println("Error adding customer.");
@@ -222,9 +222,11 @@ public class Main {
                         try {
                             System.out.println("Customers:");
                             for (Customer cu : r.getCustomers()) System.out.println(cu);
-                            System.out.print("Enter customer ID: ");
-                            int cid = Integer.parseInt(scanner.nextLine());
-                            Order o = r.createOrder(cid);
+
+                            System.out.print("Enter customer identification number: "); // CAMBIO
+                            String identification = scanner.nextLine();
+
+                            Order o = r.createOrder(identification); // CAMBIO
                             System.out.println(o != null ? "Order created: " + o : "Customer not found.");
                         } catch (Exception e) {
                             System.out.println("Error creating order.");

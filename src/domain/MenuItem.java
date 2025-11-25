@@ -1,13 +1,14 @@
 package domain;
 
 public class MenuItem {
-    private final int id;
-    private final String name;
-    private final String description;
-    private final double price;
+    private static int counter = 1;
+    private int id;
+    private String name;
+    private String description;
+    private double price;
 
-    public MenuItem(int id, String name, String description, double price) {
-        this.id = id;
+    public MenuItem(String name, String description, double price) {
+        this.id = counter++;
         this.name = name;
         this.description = description;
         this.price = price;
@@ -20,6 +21,6 @@ public class MenuItem {
 
     @Override
     public String toString() {
-        return id + " -> " + name + " | $" + price;
+        return "MenuItem { id=" + id + ", name='" + name + "', price=" + price + " }";
     }
 }
