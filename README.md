@@ -30,17 +30,20 @@ El objetivo del sistema es ofrecer una herramienta práctica para organizar las 
 ## Ejemplos de entrada y salida
 Registrar un cliente y asignarle una mesa:  
 Entradas  
-`1-Crear mesa  
-Enter number of seats: 4` 
-
+```
+1-Crear mesa  
+Enter number of seats: 4`
+```
+```
 `2-Registrar cliente   
 Enter customer name: Hermenegelido  
 Enter identification number: 1057783425`  
-
+```
+```
 Salidas  
 `Added table: Table ( id=1, seats=4, occupied=false )  
 Added: Customer ( id=3, name='Hermenegildo', identificationNumber='1057783425', table=1 )`  
-
+```
 
 
 
