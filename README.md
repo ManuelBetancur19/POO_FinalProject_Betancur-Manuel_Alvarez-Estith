@@ -4,30 +4,28 @@
 Manuel Felipe Betancur Buitrago (65143)  
 Estith Jakobo Álvarez Quintero (64302)
 
-Descripción General del Sistema
+##Descripción General del Sistema
 Este proyecto consiste en un sistema de gestión para un restaurante, cuyo objetivo principal es permitir el manejo de mesas, órdenes y productos del menú de manera sencilla.
 El sistema facilita a un administrador o mesero realizar acciones como:
 
-Registrar mesas disponibles y su estado (ocupada/libre).
+##Registrar mesas disponibles y su estado (ocupada/libre).  
 Crear nuevas órdenes asociadas a una mesa.
 Agregar o remover ítems del menú a una orden existente.
 Consultar las órdenes realizadas y sus detalles.
 Calcular totales de la orden según los productos agregados.
 
-Objetivo
+##Objetivo
 El objetivo del sistema es ofrecer una herramienta práctica para organizar las operaciones básicas del restaurante, manteniendo un registro claro y estructurado de mesas, pedidos y productos.
 
-Funcionamiento general
+##Funcionamiento general
 El programa se ejecuta por consola y ofrece un menú interactivo.
 El usuario selecciona una opción y el sistema ejecuta acciones como:
 Crear una mesa o marcarla como ocupada/libre.
 Crear una orden asignada a una mesa.
 Agregar ítems del menú a la orden.
-
-
-
 Eliminar ítems de la orden.
-
 Mostrar el resumen de la orden.
+
+
 
 Listar el menú o las órdenes existentes.
